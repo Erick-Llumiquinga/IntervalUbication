@@ -90,7 +90,7 @@ export default class Localitation extends Component {
             <TextInput style={{ height: 50}} onChangeText={this.handleNombre} placeholder='Nombre'/>
         </View>
           <Button title="Iniciar" style={{color: 'blue'}} onPress={()=>{setInterval(this.getLocalitation,5000)}}/>
-          <Button title="Parar" style={{color: 'red'}} onPress={()=>{clearInterval()}}/>
+          <Button title="Parar" style={{color: 'red', marginTop: 50}} onPress={()=>{clearInterval(this.getLocalitation())}}/>
       </View>
     )  
   }
@@ -105,6 +105,6 @@ const styles = StyleSheet.create({
   },
   boton: {
     backgroundColor: '#367698',
-    color: 'white'
+    color: 'white',
   }
 });
